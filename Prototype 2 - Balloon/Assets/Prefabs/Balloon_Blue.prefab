@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 3463283669378780186}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015047103, y: 1.829, z: -0.010043889}
+  m_LocalPosition: {x: 0.015047103, y: 1.847, z: -0.010043889}
   m_LocalScale: {x: 1, y: 1.2344997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -269,6 +269,8 @@ GameObject:
   - component: {fileID: 5559434767261514128}
   - component: {fileID: 6670377318607389319}
   - component: {fileID: 8402514525950330315}
+  - component: {fileID: 3425038782774415362}
+  - component: {fileID: 3070792396499596318}
   m_Layer: 0
   m_Name: Balloon_Blue
   m_TagString: Untagged
@@ -344,3 +346,32 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &3425038782774415362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497566292066090766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9723488035c1446913428360e8f66c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &3070792396499596318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497566292066090766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ff375e9a667c4cb7803af9c957e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickToPop: 2
+  scaleToIncrease: 0.15
+  scoreToGive: 25
+  popEffect: {fileID: 0}
