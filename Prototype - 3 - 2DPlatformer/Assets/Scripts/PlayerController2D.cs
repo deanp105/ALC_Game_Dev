@@ -17,11 +17,16 @@ public class PlayerController2D : MonoBehaviour
     public Rigidbody2D rig;
     public TextMeshProUGUI scoreText;
 
-    public void AddScore (int amount)
-{
-    score += amount;
-    scoreText.text = "Score: " + score;
-}
+void Start()
+    {
+        isGrounded = true;
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+        scoreText.text = "Score: " + score;
+    }
 
 
 void FixedUpdate ()
@@ -35,6 +40,7 @@ void FixedUpdate ()
     {
         if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
+            Debug.Log("Player is jumping");
             isGrounded = false;
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
@@ -47,9 +53,11 @@ void FixedUpdate ()
 
     void OnCollisionEnter2D (Collision2D collision)
     {
-        if(collision.GetContact(0).normal == Vector2.up)
+        Debug.Log("Player is touching ground");
+        if(collision.GetContact(1).normal == Vector2.up)
         {
-            isGrounded= true;
+            Debug.Log("Player is grounded");
+            isGrounded = true;
         }
     }
 

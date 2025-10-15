@@ -22,18 +22,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed, Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
         if (transform.position == targetPos)
         {
-            targetPos = startPos + moveOffset;
-        }
-        else
-        {
-            targetPos = startPos;
+            if (targetPos == startPos)
+            {
+                targetPos = startPos + moveOffset;
+            }
+
+
+            else
+            {
+                targetPos = startPos;
+            }
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
