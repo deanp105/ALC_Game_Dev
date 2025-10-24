@@ -1,6 +1,4 @@
 using UnityEngine;
-using Systems.Collections;
-using Systems.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class EndFlag : MonoBehaviour
